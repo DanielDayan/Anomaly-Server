@@ -61,10 +61,17 @@ now server is running ! , open your browser at
 ```bash
 localhost:8080
 ```
-upload your files (provided examples for your use at files_csv) 
-chose your algorithm (simple / hybrid ) and submit
-and click on Detect 
-you can see the results below
+chose your files 
+
+upload your files (provided examples for your use at files_csv) via uplaod buttons 
+(each file has its own upload button)
+
+chose your algorithm (simple / hybrid ) and Submit
+
+then click on Detect
+
+now you can see the results below
+
 
  NOTICE : we assumed CSV files comes with first line name of the features .
 
