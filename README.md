@@ -26,8 +26,12 @@ Anomaly Server was written in node.js technolgy using express server template
 
 
 
-## Installation
-
+## Running
+(instructions written for Windows users)
+requirements : Node.js 
+you can download it from : https://nodejs.org/en/
+After installing node js , you can download files into you own PC 
+.........
 
 
 
