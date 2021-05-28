@@ -35,7 +35,11 @@ you can download it from : https://nodejs.org/en/
 
 After installing node js , you can download files as zip or git clone the project to your own PC
 
-When all of the files located in your PC open the CMD windows (command line prompt) and change the directory to your-downloaded-path/AnomalyServer/bin
+When all of the files located in your PC open the CMD windows (command line prompt) and change the directory to 
+
+```bash
+your-downloaded-path/AnomalyServer/bin
+```
 
 example :
 
@@ -73,7 +77,7 @@ or
 * train.csv - for learn file
 * test.csv - for detect file
 
-## npm  -
+## npm's 
 
 In our development of Anomaly-Detection-Server
 we used the following npm
