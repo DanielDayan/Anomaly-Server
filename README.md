@@ -87,8 +87,11 @@ or
 ## npm's 
 
 In our development of Anomaly-Detection-Server
+
 we used the following npm
+
 smallest-enclosing-circle - used in minimum circle algorithm
+
 alert - used when error occured ( such as no csv uploaded) 
 
 
