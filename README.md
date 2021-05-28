@@ -30,12 +30,32 @@ Anomaly Server was written in node.js technolgy using express server template
 (instructions written for Windows users)
 requirements : Node.js 
 you can download it from : https://nodejs.org/en/
-After installing node js , you can download files into you own PC 
-.........
+After installing node js , you can download files as zip or git clone the project to your own PC
 
+When all of the files located in your PC open the CMD windows (command line prompt) and change the directory to your-downloaded-path/AnomalyServer/bin
 
+example :
+![screenshoit](https://user-images.githubusercontent.com/64739791/119964278-b7e09f00-bfb1-11eb-917a-3a29bfc76b70.png)
 
+When all set up , and you are in the current directory use the command :
 
+```bash
+npm install
+```
+after it finished installing all the required npm's use command
+
+```bash
+node www
+```
+now server is running ! , open your browser at 
+
+```bash
+localhost:8080
+```
+upload your files (provided examples for your use at files_csv) 
+chose your algorithm (simple / hybrid ) and submit
+and click on Detect 
+you can see the results below
 
  NOTICE : we assumed CSV files comes with first line name of the features .
 
