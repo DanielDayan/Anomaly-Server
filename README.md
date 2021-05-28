@@ -28,8 +28,11 @@ Anomaly Server was written in node.js technolgy using express server template
 
 ## Running
 (instructions written for Windows users)
+
 requirements : Node.js 
+
 you can download it from : https://nodejs.org/en/
+
 After installing node js , you can download files as zip or git clone the project to your own PC
 
 When all of the files located in your PC open the CMD windows (command line prompt) and change the directory to your-downloaded-path/AnomalyServer/bin
