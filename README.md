@@ -35,6 +35,8 @@ After installing node js , you can download files as zip or git clone the projec
 When all of the files located in your PC open the CMD windows (command line prompt) and change the directory to your-downloaded-path/AnomalyServer/bin
 
 example :
+
+
 ![screenshoit](https://user-images.githubusercontent.com/64739791/119964278-b7e09f00-bfb1-11eb-917a-3a29bfc76b70.png)
 
 When all set up , and you are in the current directory use the command :
