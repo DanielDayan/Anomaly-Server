@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title >Anomaly Detection Server</title>
+    <style>
+        body {
+            background-image: url("images/bg_detector.jpg");
+            background-size: cover;
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .button5 {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+        }
+
+        .button5:hover {
+            background-color: #555555;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+<!--title-->
+<div  style="text-align:center">
+<h1 style="color: red;"> Anomaly Detection <br> Server </h1>
+    <br><br>
+<!-- upload buttons-->
+
+
+        <form style="background-color: white;text-align:left; width: 500px" action="/uploadCSVLearn" method="post" enctype="multipart/form-data" name="uploadFormLearn" target="current_csv_learn" >
+            <table>
+                <tr>
+                    <td><input type="file" name="learnCSVFile"></td>
+                   <td><input type="submit" value="upload valid CSV file to learn from"></td>
+                </tr>
+            </table>
+        </form>
+        <form style="background-color: white;width: 500px;" action="/uploadCSVDetect" method="post" enctype="multipart/form-data" name="uploadFormDetect" target="current_csv_detect" >
+            <table>
+                <tr>
+                    <td><input  type="file" name="detectCSVFile"></td>
+                    <td><input type="submit" value="upload CSV file to detect anomalies"></td>
+                </tr>
+
+            </table>
+
+        </form>
+    <!-- chose algorithm-->
+        <form action="/setDetector" method="post" enctype="multipart/form-data" name="choseDetector" target="current_detector"
+              style="text-align:center; color:black; background-color: transparent; font-size:18px;top:-20px;">
+            <label style="color: royalblue">: בחר אלגוריתם לגילוי חריגות
+                <br>
+                <select name="detectorType" size="4">
+                    <option value="1" selected="selected"> Linear Regression detector </option>
+                    <option value="2" > Minimum Circle detector</option>
+
+                </select>
+            </label>
+            <p> <input type="submit" value="Submit"></p>
+        </form>
+
+
+
+<br>
+<!--   <-- Detect Button-->
+<div style="text-align: center">
+    <form action="/detect" method="post" target="detectResult">
+
+            <button type="submit"  class="button button5">Detect!</button>
+    </form>
+</div>
+<br>
+<!--  iframes  -->
+<p style="text-align: center">
+
+        <label style="color:royalblue "> Current CSV learn file :<br>
+            <iframe style="background-color: white" name="current_csv_learn" width="330px" height="30px"></iframe>
+        </label>
+    <br>
+    <label style="color:royalblue "> Current CSV detect file :<br>
+        <iframe style="background-color: white" name="current_csv_detect" width="330px" height="30px"></iframe>
+    </label>
+<br>
+    <label style="color:royalblue "> Current detector :<br>
+        <iframe style="background-color: white" name="current_detector" width="330px" height="30px"></iframe>
+    </label>
+
+<br>
+    <label style="color:royalblue "> Anomalies detected: :<br>
+<iframe style="background-color: white" name="detectResult" width="80%" height="400px">
+
+</iframe>
+    </label>
+</p>
+</div>
+</body>
+</html>
