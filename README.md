@@ -21,6 +21,26 @@ Anomaly Server was written in node.js technolgy using express server template
 - You can also send Post http request at localhost:8080/detect to get the result as JSON object
 
 
+## Http POST
+
+In order to send http POST to server , you could use 
+Postman : https://www.postman.com/downloads/
+
+To send Http POST request and get the anomalies as JSON send request at  
+
+```bash
+localhost:8080/detect
+```
+
+and chose your files with the keys : 
+
+learnFile  - as key to CSV train file
+
+detectFile  - as key to CSV detect file
+
+type - as key to type of the detector (currently support only "simple" or "hybrid"
+
+see video below for further more information.
 
 
 
