@@ -88,25 +88,26 @@ app.post('/setDetector', (req, res) => {
 
 app.post('/detect',(req, res) => {
 
-  // user story 1
-  if (is_learn_csv_uploaded && is_detect_csv_uploaded) {
-    let cf = model.learnNormal(map, detectMethod)
+ if (req.body.type == null) {
+   // user story 1
+   if (is_learn_csv_uploaded && is_detect_csv_uploaded) {
+     let cf = model.learnNormal(map, detectMethod)
 
-    let ar = model.detectAnomalies(map2, cf, detectMethod)
-    for(let i = 0; i < ar.length; i++) {
-      //res.write(JSON.stringify(ar[i]) + "\n")
-     let desc  = i.toString() + ". " + ar[i].feature1 + " with " + ar[i].feature2  +" at line " + ar[i].line.toString() + '\n'
-      res.write(desc)
+     let ar = model.detectAnomalies(map2, cf, detectMethod)
+     for (let i = 0; i < ar.length; i++) {
+       //res.write(JSON.stringify(ar[i]) + "\n")
+       let desc = i.toString() + ". " + ar[i].feature1 + " with " + ar[i].feature2 + " at line " + ar[i].line.toString() + '\n'
+       res.write(desc)
 
-    }
-  if (ar.length === 0) {
-    res.write("No Anomalies Detected !")
-  }
-  res.end()
-  return;
-  }
+     }
+     if (ar.length === 0) {
+       res.write("No Anomalies Detected !")
+     }
+     res.end()
+   }
+ }
   // http  post for story 2
-  if(req.files != null) {
+  else if(req.files != null) {
     map = model.createTimeSeries(req.files.learnFile.data.toString())
     map2 = model.createTimeSeries(req.files.detectFile.data.toString())
     const type = req.body.type
