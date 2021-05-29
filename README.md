@@ -128,6 +128,7 @@ alert - used when error occured ( such as no csv uploaded)
 
 # Video 
 
+https://youtu.be/tqSDDcRKq8w
 
 
 that all for now see you in next version update !
